@@ -31,11 +31,16 @@ A collection of cool and useful UNIX command line stuff I've learned over time.
 ### General
 
 - Display manual for terminal commands:
+   
    `$ man command` (e.g. `$ man cd`)
+
 - List files with more info:
+
    `$ ls -l`
+   
 - Perform last command:
-    > `$ !!`
+   
+   `$ !!`
 - Perform last command with sudo:
     > `$ sudo !!`
 - Go back to previous dir:
