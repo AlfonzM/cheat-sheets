@@ -50,29 +50,29 @@ A collection of cool and useful UNIX command line stuff I've learned over time.
     - Display first 10 lines of file:
 - `$ tail -n 10 file.xxx`
     - Display last 10 lines of file:
-- `$ echo "Hello world!" > helloworld.txt`
+- ```$ echo "Hello world!" > helloworld.txt```
     - Save text to file:
     
 ### Test
 Display contents of file
 
-```$ cat filename```
+- ```$ cat filename```
 
 Find _filename_ and only display results that contain _string_
 
-```$ find path/to/dir filename | grep string```
+- ```$ find path/to/dir filename | grep string```
 
 Display first 10 lines of file
 
-```$ head -n 10 file.xxx```
+- ```$ head -n 10 file.xxx```
 
 Display last 10 lines of file
 
-```$ tail -n 10 file.xxx```
+- ```$ tail -n 10 file.xxx```
 
 Save text to file
 
-```$ echo "Hello world!" > helloworld.txt```
+- ```$ echo "Hello world!" > helloworld.txt```
 
 
 ### Directories
