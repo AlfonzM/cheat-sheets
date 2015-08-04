@@ -230,3 +230,42 @@ Undo changes then revert this file to last commit version:
 - Undo changes then revert this file to last commit version:
 
  ```$ git checkout --path/to/file.xxx```
+
+
+
+### Tips and tricks
+- Add all AND commit in one command:
+
+ ```
+ $ git commit -a -m "message"
+ ```
+
+- A cleaner more compact git log:
+
+ ```
+ $ git log --oneline
+ ```
+
+- Limit to last 5 logs:
+
+ ```
+ $ git log -5`, `$git log --oneline -5
+ ```
+
+- A cleaner more compact git status:
+
+ ```
+ $ git status -s
+ ```
+
+- Remove file from index:
+
+ ```
+ $ git rm --cached filename.xxx
+ ```
+
+- Undo changes then revert this file to last commit version:
+
+ ```
+ $ git checkout --path/to/file.xxx
+ ```
