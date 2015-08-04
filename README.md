@@ -249,7 +249,8 @@ Undo changes then revert this file to last commit version:
 - Limit to last 5 logs:
 
  ```
- $ git log -5`, `$git log --oneline -5
+ $ git log -5
+ $ git log --oneline -5
  ```
 
 - A cleaner more compact git status:
