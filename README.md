@@ -80,6 +80,23 @@ Save text to file
 - ```$ echo "Hello world!" > helloworld.txt```
 
 
+### Test
+- Display contents of file
+ - ```$ cat filename```
+
+- Find _filename_ and only display results that contain _string_
+ - ```$ find path/to/dir filename | grep string```
+
+- Display first 10 lines of file
+ - ```$ head -n 10 file.xxx```
+
+- Display last 10 lines of file
+ - ```$ tail -n 10 file.xxx```
+
+- Save text to file
+ - ```$ echo "Hello world!" > helloworld.txt```
+
+
 ### Directories
 - Make directory: `$ mkdir dir_name`
 - Remove directory: `$ rm -rf dir_name`
