@@ -41,10 +41,19 @@ A collection of cool and useful UNIX command line stuff I've learned over time.
 - Perform last command:
    
    `$ !!`
+
+### Test
 - Perform last command with sudo:
-    > `$ sudo !!`
+
+   ```
+   $ sudo !!
+   ```
+   
 - Go back to previous dir:
-    > `$ cd -`
+
+   ```
+   $ cd -
+   ```
 
 ### Files
 - `$ cat filename`
@@ -55,7 +64,7 @@ A collection of cool and useful UNIX command line stuff I've learned over time.
     - Display first 10 lines of file:
 - `$ tail -n 10 file.xxx`
     - Display last 10 lines of file:
-- ```$ echo "Hello world!" > helloworld.txt```
+- `$ echo "Hello world!" > helloworld.txt`
     - Save text to file:
     
 ### Test
@@ -96,10 +105,17 @@ Save text to file
 - Save text to file
  - ```$ echo "Hello world!" > helloworld.txt```
 
-
 ### Directories
-- Make directory: `$ mkdir dir_name`
-- Remove directory: `$ rm -rf dir_name`
+- Make directory
+  
+ ```
+ $ mkdir dir_name
+ ```
+- Remove directory
+  
+  ```
+  $ rm -rf dir_name
+  ```
 
 ## Git/GitHub
 
