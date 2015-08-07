@@ -64,17 +64,22 @@ List of basic and commonly used Git commands. Also, tips and tricks.
 
 - Undo a `git add <file>`: `$ git reset <file>`
 - Undo a `git add .`: `$ git reset`
-- Forgot to add a file and already committed, or edit commit message: `$ git commit --amend -m 'new commit message here. added files are also included in this commit'`
 - Remove file from index: `$ git rm --cached <file>`
 - Undo changes then revert this file to last commit version: `$ git checkout -- path/to/file`
+- If you want to add a file you forgot to add in a commit you just committed, or if you simply want to edit the commit message: `$ git commit --amend`
+- To push an amended commit to remote repo, use `$ git push -f origin <branchname>`. However, this is **_strongly discouraged_** unless you're absolutely sure only you are going to use the repository.
 
-[_Read more about "Undoing Things" here._](https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things)
+_Read more about [Undoing Things in Git](https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things) and [Pushing amended commits to remote repo](http://stackoverflow.com/questions/253055/how-do-i-push-amended-commit-to-the-remote-git-repo)._
 
 ### Branching
 
 #### General
 - Show all branches including remote: `$ git branch -a`
 - Merge current branch with <branchname>: `$ git merge <branchname>`
+- Save your dirty changes in a "stash": `$ git stash`
+- Reapply the stashed changes: `$ git stash apply`
+- List all stashed changes: `$ git stash list`
+- Clear stash list: `$ git stash clear`
 
 #### Checkout
 Note: `git stash` might be helpful when switching branches.
@@ -84,17 +89,38 @@ Note: `git stash` might be helpful when switching branches.
 - Create and checkout to new branch: `$ git checkout -b <branchname>`
 - Create local clone of remote branch then checkout into it: `$ git checkout -b new_branch_name remote_branch_name`
 
+##### Sample flow when working with branches:
+```
+// Display your current dirty state with uncommited changes
+$ git status
+
+// Stash changes, now it's safe to switch branches
+$ git stash
+
+// Checkout to a different branch
+$ git checkout <new-branch>
+
+// Make changes to files, commit, push etc.
+// ...
+
+// Return to original branch
+$ git checkout <original-branch>
+
+// Reapply stashed changes
+$ git stash apply
+```
+
 #### Delete
 - Delete branch: `$ git branch -d <branchname>`
 - Delete branch without completing merge, i.e. force delete: `$ git branch -D <branchname>`
 
 #### Push
--  Push local branch to GitHub: `$ git push origin <branch_name>`
--  Delete remote branch: `$ git push --delete <branch_name>`
--  Delete remote branch: `$ git push origin :<branch_name>`
+-  Push local branch to GitHub: `$ git push origin <branchname>`
+-  Delete remote branch: `$ git push --delete <branchname>`
+-  Delete remote branch: `$ git push origin :<branchname>`
 
 ### Tips and tricks
-- Add all AND commit in one command: `$ git commit -a -m "message"`
+- Add all + commit in one command: `$ git commit -a -m "message"`
 - A cleaner more compact git log: `$ git log --oneline`
 - Limit to last 5 logs: `$ git log -5`, `$git log --oneline -5`
 - A cleaner more compact git status: `$ git status -s`
