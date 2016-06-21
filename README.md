@@ -20,25 +20,23 @@ Inspired by [github-cheat-sheet](https://github.com/tiimgreen/github-cheat-sheet
     - [Tips and tricks](#tipsandtricks)
  - [Sublime Text](#sublimetext)
  - [VIM](#vim)
- - [Symfony](#symfony)
 
 ## Terminal
 
-A collection of cool and useful UNIX command line stuff I've learned over time.
+A collection of useful UNIX command line stuff I've learned over time.
 
 *For more, check out [commandlinefu](http://commandlinefu.com)!*
 
 ### General
 
 - Display manual for terminal commands: `$ man command` (e.g. `$ man cd`)
-- List files with more info: `$ ls -l`
 - Perform last command: `$ !!`
 - Perform last command with sudo: `$ sudo !!`
 - Go back to previous dir: `$ cd -`
 
 ### Files
 - Display contents of file: `$ cat filename`
-- Find _filename_ and only display results that contain _string_: `$ find path/to/dir filename | grep string`
+- Find `filename` and only display results that contain `string`: `$ find path/to/dir filename | grep string`
 - Display first 10 lines of file: `$ head -n 10 file.xxx`
 - Display last 10 lines of file: `$ tail -n 10 file.xxx`
 - Save text to file: `$ echo "Hello world!" > helloworld.txt`
@@ -124,3 +122,15 @@ $ git stash apply
 - A cleaner more compact git log: `$ git log --oneline`
 - Limit to last 5 logs: `$ git log -5`, `$git log --oneline -5`
 - A cleaner more compact git status: `$ git status -s`
+
+## VIM
+
+### Tips and tricks
+
+- Save file if vim was not run with sudo: `:w !sudo tee %`
+- Run a terminal command while in VIM: `:! [command]`
+- Add a dot after : to write output to VIM editor: `:.! date`
+- "Delete in" commands:
+	- `diw` – delete current word
+	- `di(` – delete text inside current parens
+	- `di"` – delete text inside current quotes
