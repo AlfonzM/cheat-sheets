@@ -122,6 +122,7 @@ $ git stash apply
 - A cleaner more compact git log: `$ git log --oneline`
 - Limit to last 5 logs: `$ git log -5`, `$git log --oneline -5`
 - A cleaner more compact git status: `$ git status -s`
+- Fuck you DS_Stores `$ echo "**/.DS_Store" >> .gitignore && rm -rf **/.DS_Store`
 
 ## VIM
 
